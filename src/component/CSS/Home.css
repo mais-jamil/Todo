@@ -1,0 +1,188 @@
+body{
+    width: 100%;
+    padding-bottom: 5px;
+    
+    }
+    body input:focus{
+      outline: none;
+    }
+    
+      
+
+.img{
+    margin: 2PX 11px;
+}
+      
+.nav{
+    height: 49px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #222831;
+}
+.signIn{
+    display: flex;
+    justify-content: flex-end;
+    margin:7px 25px;
+}
+      
+.textBox{
+    height: 28px;
+    border-radius: .25rem;
+    border: 1px solid #ced4da;
+    margin-right: 20px;
+    padding: .375rem .75rem;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.textBox2{
+    border-radius: .25rem;
+    border: 1px solid #ced4da;
+    margin-right: 40px;
+    width: 220px;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    display: flex;
+    margin: 15px;
+    width: 400px;
+    display: flex;
+    margin: 15px;
+    width: 400px;
+}
+
+.title{
+    text-align: initial;
+    margin-right: 40px;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    margin-left: 75px;
+}
+
+.b1{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    height: 35px;
+    width: 150px;
+    background-color: #c8ede6;
+    border: #c8ede6 solid 1px;
+    border-radius: .25rem;
+    color: #222831;
+}
+
+.logInButton{
+    margin-top: 3px;
+    height: 27px;
+    background-color: #c8ede6;
+    border: #c8ede6 solid 1px;
+    border-radius: .25rem;
+    width: 80px;
+    color: #222831;
+}
+
+.main{
+    margin-top: 50px;
+}
+
+h1{
+    font-size: 40px;
+    color: #222831;
+}
+
+
+.edit_container{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media(max-width: 320px){
+  h1{
+    margin-left: 0px !important;
+    font-size: 20px;
+    color: #222831;
+  }
+    .textBox{
+      width: 180px !important;
+    }
+    .edit_container{
+      display: block !important;
+    }
+    .b1{
+      display: block;
+      margin-left: 20px !important;
+    }
+    .form{
+      margin-left: 50px !important;
+    }
+  }
+  
+  @media (max-width: 425px){
+    h1{
+      margin-left: 0px !important;
+      font-size: 20px;
+      color: #222831;
+    }
+    .nav{
+      height: 120px;
+      width: auto;
+    }
+    .textBox{
+      margin-bottom: 10px;
+    }
+    .edit_container{
+      display: block !important;
+    }
+    .b1{
+      display: block;
+      margin-left: 20px !important;
+    }
+    .form{
+      margin-left: 50px !important;
+
+    }
+  }
+  
+  @media (max-width:768px){
+      h1{
+        margin-left: 0px !important;
+        font-size: 20px;
+        color: #222831;
+      }
+      .t1{
+        display: block;
+        text-align: initial;
+      }
+      .textBox{
+        width: auto;
+        font-weight: normal;
+        font-size: 15px;
+      }
+      .textBox2{
+        width: auto;
+      }
+      img{
+        display: flex;
+      }
+      .edit_container{
+        display: block !important;
+    
+      }
+      .b1{
+        display: block;
+        margin-left: 20px !important;
+      }
+      .form{
+        margin-left: 50px !important;
+       
+
+      }
+  }
+
+ 

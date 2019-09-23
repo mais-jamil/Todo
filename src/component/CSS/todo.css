@@ -1,0 +1,100 @@
+.some-page-wrapper {
+    margin: 15px;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 10px;
+    flex-basis: 100%;
+    color: #fff;
+    flex: 1;
+    
+  }
+  
+  .blue-column {
+    height: auto;
+    background:  #393e46;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    
+  }
+  
+  .green-column {
+    height: auto;
+    background: #00adb5;
+    padding-bottom: 10px;
+    border-radius: 10px;
+  }
+  
+  .Label {
+    word-wrap: break-word; 
+    line-height: 16px; 
+    float: left;
+  }
+  .FL{
+    float: left;
+  }
+.container {
+  width: 100%;
+  background: #393e46;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.inner{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 10px;
+  flex-basis: 100%;
+  color: #fff;
+  flex: 1;
+}
+
+  li{
+    list-style: none;
+  }
+.Input {
+
+  background-color: white;
+  background-image: url('todoo.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  height: 35px;
+  width: 70%;
+}
+
+.button{
+  width: 50%;
+  background: rgb(235, 234, 232);
+  border-radius: 25px;
+  height: 30px;
+  margin: 5px;
+  color: black;
+  border: 3px solid;
+  border-color: #4592af #c72c41 #33313b #c72c41 ;
+  font-weight: bold;
+}
+
+.button:hover{
+  width: 50%;
+  background:#393e46;
+  border-radius: 25px;
+  height: 30px;
+  margin: 5px;
+  color: #fff;
+  border: 3px solid;
+  border-color: #c72c41 #33313b #4592af #c86673 ;
+  font-weight: bold;
+
+}

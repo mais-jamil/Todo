@@ -1,0 +1,44 @@
+ul {
+    list-style-type: none;
+    margin: 0 ;
+    padding: 0;
+    overflow: hidden;
+    color: #fff;
+    background-color:#222831;
+  }
+  
+  li {
+    float: left;
+    margin:  0 0 0 10px
+  }
+  li img {
+    width: 50px;
+    height: 46px;
+  }
+  
+  li a {
+    display: block;
+    color: #eeeeee;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #00adb5;
+    color: #fff
+  }
+  
+ 
+  .iconsize{
+   float: right;
+   color: #fff;
+   margin-right: 15px;
+   margin-top: 15px;
+   cursor: pointer;
+  
+  }
+
+  .iconsize:hover{
+    color: #FFF
+  }
