@@ -6,12 +6,14 @@ const Todo = require('./Module/todoList')
 const signupUser = require('./Module/signupUserSchema')
 const URL = 'mongodb+srv://team:1234@cluster0-0bpu8.mongodb.net/test?retryWrites=true&w=majority'
 
+const path = require('path');
+
 mongoose.connect(URL,{ useNewUrlParser: true ,useUnifiedTopology: true,useFindAndModify: false,useCreateIndex:true })
 .then(() => console.log('Connected to DB'))
 .catch(err => console.log('Error', err))
 
 app.use(express.json())
-
+app.use(express.static(path.join(__dirname, '../build/')))
 
 app.post('/signUp',(req,res)=>{
     console.log('newUser',req.body)
@@ -65,6 +67,11 @@ app.post('/editItem',(req,res) =>{
     Todo.updateOne({Task : req.body.old},{$set :{Task:req.body.newTask}})
     .then(res => console.log('Response After Edit', res.Task))
     .catch(err => console.log('Error form POST Edit Task ', err))
+})
+
+
+app.get('/*', (req, res) => {
+    res.sendFile(path.resolve(path.join(__dirname, '../build/index.html')))
 })
 
 app.listen(PORT)
