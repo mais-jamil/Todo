@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const PORT =5050
+const PORT =  process.env.PORT || 5050;
 const mongoose = require('mongoose')
 const Todo = require('./Module/todoList')
 const signupUser = require('./Module/signupUserSchema')
