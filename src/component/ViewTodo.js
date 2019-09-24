@@ -26,7 +26,7 @@ export default class Edit extends Component {
         console.log('ID', ID)
         const fetchTask = await axios.get('viewTask', {
             params: { id: localStorage.getItem('id') }
-        })        
+        })
         this.setState({
             tasks: fetchTask.data,
                
@@ -81,11 +81,8 @@ export default class Edit extends Component {
         axios.post('/deleteItem',this.state.tasks[id])
         .then(res =>this.getData())
 
-    
-
     }//End Of Delete Item
      
-      
     render() {
         const { tasks } = this.state;
         return (

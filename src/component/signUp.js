@@ -20,6 +20,7 @@ class signUp extends Component {
         })
     }
     click = () => {
+        
         const user = {
             firstName: this.state.firstName,
             lastName: this.state.lastName,
@@ -27,11 +28,24 @@ class signUp extends Component {
             password: this.state.password
         }
         axios.post('signUp', user)
-            .then((res) => console.log(res))
+            .then(({ data }) => {
+                if (data.name !== 'MongoError'){
+                    localStorage.setItem('firstName', user.firstName)
+                    localStorage.setItem('lastName', user.lastName)
+                    localStorage.setItem('email', user.email)
+                    localStorage.setItem('password', user.password)
+                    window.location.href = "/create"
+                } else {
+                alert('Something Went Wrong');
+
+                }
+            })
+            .catch(() => {
+                alert('Something Went Wrong');
+            })
     }
 
     render() {
-        console.log(this.state)
         return (
             <div>
                 <div className="edit_container">

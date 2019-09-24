@@ -16,15 +16,13 @@ app.use(express.json())
 app.use(express.static(path.join(__dirname, '../build/')))
 
 app.post('/signUp',(req,res)=>{
-    console.log('newUser',req.body)
     const newUser =  new signupUser(req.body)
     newUser.save()
-    .then(Saved => console.log('Welcome :)', Saved))
-    .catch(err => console.log('Error :(', err))
+    .then(Saved => res.send(Saved))
+    .catch(err =>  { res.send(err)})
 })
 
 app.post('/login', (req,res)=>{
-    console.log('Welcom', req.body)
     signupUser.findOne({email:req.body.email, password:req.body.password})
     .then(data => {
         res.send(data)
